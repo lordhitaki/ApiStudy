@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elencos",
+  "info": {
+    "singularName": "elenco",
+    "pluralName": "elencos",
+    "displayName": "Elenco",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ator": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movie.movie"
+    }
+  }
+}
